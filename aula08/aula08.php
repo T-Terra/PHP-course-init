@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilo.css"/>
-    <title>Aula 06 PHP</title>
+    <title>Aula 08 PHP</title>
     <style>
         
     </style>
 </head>
 <body>
 <div>
-    <?php 
-        $x = "abc";
-        $$x = "def";
-        echo "O conteudo da variavel X é $x";
-        echo "<br>A variavel ABC criada recebeu o valor $abc"; 
-        /*Com dois $$ você pode atribuir uma variavel dentro de outra variavel*/
+    <?php
+        $valor = $_GET["value"];
+        echo "O usuário digitou $valor<br>";
+        $nome = $_GET["name"];
+        $idade = $_GET["age"];
+        echo "O usuário digitou $nome e a idade $idade";
     ?>
+    <a href="aula08.html">voltar</a>  
 </div>
 </body>
 </html>
