@@ -12,9 +12,9 @@
 <body>
 <div>
     <?php
-        $nome = $_GET["name"]; 
-        $ano = $_GET["ano"];
-        $sexo = $_GET["sexo"];
+        $nome = isset($_GET["name"])?$_GET["name"]:"[Não informado]"; 
+        $ano = isset($_GET["ano"])?$_GET["ano"]:0;
+        $sexo = isset($_GET["sexo"])?$_GET["sexo"]:"[Sem sexo]";
         $idade = date("Y") - $ano;
         echo "Seu nome é $nome do sexo $sexo e tem $idade anos";
     ?>
