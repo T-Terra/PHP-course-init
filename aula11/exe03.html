@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Contagem progressiva</title>
+    <style>
+        input.botao {
+            background-color: rgb(62, 66, 119);
+            color: white;
+            padding: 4pt 4pt 4pt 4pt;
+            border-radius: 0pt 5pt 0pt 5pt;
+            box-shadow: black 2pt 2pt 4pt 1pt;
+        }
+
+        input.label {
+            width: 30pt;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form method="get" action="exe03.php">
+        <fieldset><legend>Contagem Progressiva</legend>
+            Início: <input type="number" name="init" class="label"><br>
+            Final: <input type="number" name="final" class="label">
+            <br>Incremento: <select name="incre" id="incre">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        
+            <br><input type="submit" class="botao" value="Verificar...">
+        </fieldset>
+    </form>
+    
+</div> 
+</body>
+</html>
