@@ -16,10 +16,8 @@
     </form>
     <?php
         $num = isset($_GET["num"])?$_GET["num"]:1;
-        $res1 = $num / 1;
-        $res = $num / $num;
-        if ($res1 && $res == 0){
-            echo "$num é Primo";
+        for ($res=$num; $res <= 50; $res++){
+            
         }
         echo "$res1 $res"
     ?>
