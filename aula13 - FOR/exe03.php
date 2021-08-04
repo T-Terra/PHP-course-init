@@ -16,10 +16,16 @@
     </form>
     <?php
         $num = isset($_GET["num"])?$_GET["num"]:1;
-        for ($res=$num; $res <= 50; $res++){
-            
+        for ($res = 1; $res <= $num; $res++){
+            $tot = $num / $res;
+            echo "$num / $res = $tot<br>";
         }
-        echo "$res1 $res"
+        if ($num % $res == 1 && $num % $res == ){
+            echo "$num não é primo<br>";
+        }
+        else {
+            echo "$num é primo<br>";
+        }
     ?>
 </div>
     
