@@ -16,18 +16,26 @@
     </form>
     <?php
         $num = isset($_GET["num"])?$_GET["num"]:1;
+        $div = 0;
         echo "Analizando o número $num...<br>";
         echo "Valores múltiplos: ";
         for ($res = 1; $res <= $num; $res++){
-            if ($num % $res == 0){
+            $tot = $num / $res;
+            if ($tot === 0.0 && $res <= 2){
+                $div += 1;
+            }
+            if ($div) {
+                echo "$res ";
+                $r = "NÃO É PRIMO";
+            }
+            else {
                 echo "$res ";
                 $r = "É PRIMO";
             }
-            else {
-                $r = "NÃO É PRIMO";
-            }
+            
         }
         echo "<br> O resultado é: $num $r";
+        echo "<br>Total de múltiplos: $div";
     ?>
 </div>  
 </body>
