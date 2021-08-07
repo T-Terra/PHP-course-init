@@ -20,23 +20,31 @@
         echo "Analizando o número $num...<br>";
         echo "Valores múltiplos: ";
         for ($res = 1; $res <= $num; $res++){
-            $tot = $num / $res;
-            if ($tot === 0.0 && $res <= 2){
-                $div += 1;
-            }
-            if ($div) {
-                echo "$res ";
-                $r = "NÃO É PRIMO";
-            }
-            else {
+            $tot = (int) $num / (int) $res;
+            if ($num % $res === 0){
                 echo "$res ";
                 $r = "É PRIMO";
+                $div++;
             }
-            
+            elseif ($tot === (float) $tot) {
+                echo "$res ";
+                $r = "NÃO É PRIMO";
+                $div++;
+            }
         }
         echo "<br> O resultado é: $num $r";
         echo "<br>Total de múltiplos: $div";
+        /*
+        $numero = 10;
+
+        if (gmp_prob_prime($numero)) {
+            print 'É primo';
+        } else {
+            print 'Não é primo';
+        }
+        */
     ?>
 </div>  
 </body>
 </html>
+
