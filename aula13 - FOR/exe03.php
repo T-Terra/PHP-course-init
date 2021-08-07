@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilo.css">
     <title>Números primos</title>
+    <style>
+        span.true {
+            color: green;
+        }
+        span.false {
+            color: red;
+        }
+    </style>
 </head>
 <body>
 <div>
@@ -20,20 +28,17 @@
         echo "Analizando o número $num...<br>";
         echo "Valores múltiplos: ";
         for ($res = 1; $res <= $num; $res++){
-            $tot = (int) $num / (int) $res;
             if ($num % $res === 0){
                 echo "$res ";
-                $r = "É PRIMO";
-                $div++;
-            }
-            elseif ($tot === (float) $tot) {
-                echo "$res ";
-                $r = "NÃO É PRIMO";
                 $div++;
             }
         }
-        echo "<br> O resultado é: $num $r";
         echo "<br>Total de múltiplos: $div";
+        if ($div === 2){
+            echo "<br> O resultado é: $num <span class='true'>É PRIMO</span>";
+        } else {
+            echo "<br> O resultado é: $num <span class='false'>NÃO É PRIMO</span>";
+        }
         /*
         $numero = 10;
 
