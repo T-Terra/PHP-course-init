@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+}
+
+header {
+  background-color: rgb(8, 206, 189);
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+img {
+  height: 10rem;
+  margin-left: 5rem;
+}
