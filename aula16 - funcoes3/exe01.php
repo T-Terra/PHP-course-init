@@ -37,6 +37,33 @@
     $novo = trim($nome);
     echo"<br>";
     echo(strlen($novo));
+    echo "<h2>5° str_word_count</h2>";
+    $frase = "Eu vou estudar PHP";
+    $cont = str_word_count($frase, 0); # no lugar do 0 posso colocar 1 que mostra um array ou 2
+    print($cont);
+    echo "<h2>6° explode</h2>";
+    $site = "Curso em vídeo";
+    $vetor = explode(" ", $site);
+    print_r($vetor);
+    echo "<h2>7° str_split</h2>";
+    $nome = "Maria";
+    $vetor = str_split($nome);
+    print_r($vetor);
+    echo "<h2>8° implode</h2>";
+    echo "<p>Join() é a mesma coisa que usar implode()</p>";
+    $veto[0] = "curso";
+    $veto[1] = "em";
+    $veto[2] = "vídeo";
+    $texto = implode("#", $veto); # join(); é a mesma coisa que usar implode
+    print($texto);
+    echo "<h2>9° chr</h2>";
+    $letra = chr(67);
+    echo "A letra de código 67 é $letra";
+    echo "<h2>10° ord</h2>";
+    $leta = "C";
+    $cod = ord($leta);
+    echo "O código da letra C é $cod";
+
   ?>
 </div>
 </body>
