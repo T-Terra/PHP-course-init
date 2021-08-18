@@ -20,7 +20,16 @@
         $n1 = 2;
         $n2 = 2;
         $s = $n1 + $n2;
-        echo "A soma de $n1 + $n2 é igual a $s";
+        echo "A soma de $n1 + $n2 é igual a $s <br>";
+
+        // errei essa questão no teste está retornando 7 
+        function f($v, $n) {
+            if ($n <= 0) return 1;
+            else
+            return $v[$n-1] * f($v, $n-2) + 1;
+        }
+        $a = array(0,1,2,3);
+        print (f($a, 4));
     ?>
 </div>
 </body>
