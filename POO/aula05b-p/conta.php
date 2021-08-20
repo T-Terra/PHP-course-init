@@ -9,15 +9,10 @@
 <body>
   <pre>
   <?php
-    require_once "../class/ClassCaneta02.php";
-    
-    $c1 = new Caneta("Bic", "Vermelha", 0.5);
-    $c2 = new Caneta("Faber", "Preto", 1.2);
-    //$c1->setModelo("BIC");
-    //$c1->setPonta(0.5);
+    require_once "../class/ClassConta.php";
+    $c1 = new ContaBanco("Gabriel", "cc", 123456);
     print_r($c1);
-    print_r($c2);
-    //print("Eu tenho uma caneta {$c1->getModelo()} de ponta {$c1->getPonta()}");
+    print("Meu Saldo é de R${$c1->getSaldo()}");
   ?>
   </pre>
 </body>
