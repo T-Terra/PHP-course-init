@@ -7,24 +7,29 @@
   <title>Usando Classes</title>
 </head>
 <body>
+  <pre>
+
   <?php
     require_once "./class/ClassCaneta.php";
     /* 
     só posso mexer nos Atributos e Métodos Públicos
     */
     $c1 = new Caneta; // criando um objeto
+    $c1->modelo = "BIC cristal";
     $c1->cor = "vermelho";
-    $c1->ponta = 0.5;
+    //$c1->ponta = 0.5;
     $c1->tampar();
     print_r($c1);
-    $c1->rabiscar();
+    //$c1->rabiscar();
 
+    /*
     $c2 = new Caneta;
     $c2->cor = "amarelo";
-    $c2->carga = 50;
-    $c2->destampar();
-    $c2->rabiscar();
+    //$c2->carga = 50;
+    //$c2->destampar();
+    //$c2->rabiscar();
     print_r($c2);
+    
 
     $dog = new Cachorro;
     $dog->cor = "preto";
@@ -34,6 +39,8 @@
     $dog->latir();
     $dog->iscachorro();
     print_r($dog);
+    */
   ?>
+  </pre>
 </body>
 </html>
