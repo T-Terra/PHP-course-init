@@ -12,7 +12,7 @@
     /* 
     só posso mexer nos Atributos e Métodos Públicos
     */
-    $c1 = new Caneta;
+    $c1 = new Caneta; // criando um objeto
     $c1->cor = "vermelho";
     $c1->ponta = 0.5;
     $c1->tampar();

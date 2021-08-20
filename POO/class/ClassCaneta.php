@@ -1,5 +1,5 @@
 <?php
-  class Caneta {
+  class Caneta { //Objeto molde
     //Atributos
     var $modelo;
     var $cor;
@@ -28,7 +28,7 @@
 
   }
 
-class Cachorro {
+class Cachorro { //Objeto molde
   //Atributos
   var $cor;
   var $peso;
