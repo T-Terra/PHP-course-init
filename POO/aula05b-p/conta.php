@@ -11,8 +11,10 @@
   <?php
     require_once "../class/ClassConta.php";
     $c1 = new ContaBanco("Gabriel", "cc", 123456);
+    $c1->abrirConta();
+    $c1->depositar(150);
+    $c1->sacar(10);
     print_r($c1);
-    print("Meu Saldo é de R${$c1->getSaldo()}");
   ?>
   </pre>
 </body>

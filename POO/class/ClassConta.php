@@ -11,15 +11,13 @@
       $this->dono = $nome;
       $this->tipo = $t;
       $this->numConta = $nConta;
-
+      $this->status = false;
       if ($this->tipo === "cc") {
         $this->saldo = 50;
       }
       elseif($this->tipo === "cp") {
         $this->saldo = 150;
       }
-
-      $this->abrirConta();
     }
 
     public function abrirConta() {
@@ -30,12 +28,22 @@
       $this->status = false;
     }
 
-    public function depositar() {
-      $this->abrirConta();
+    public function depositar($depo) {
+      if ($this->status === true) {
+        $this->saldo += $depo;
+      }
+      else {
+        echo "Erro! Abra sua conta antes de fazer um deposito!";
+      }
     }
 
-    public function sacar() {
-
+    public function sacar($saque) {
+      if ($this->status === true && $this->saldo >= $saque) {
+        $this->saldo -= $saque;
+      }
+      else {
+        echo "Erro! Verifique se sua conta está aberta ou se possuí saldo!<br>";
+      }
     }
 
     public function pagarMensal() {
