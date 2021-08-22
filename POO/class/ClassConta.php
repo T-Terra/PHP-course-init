@@ -12,6 +12,7 @@
       $this->tipo = $t;
       $this->numConta = $nConta;
       $this->status = false;
+      $this->saldo = 0;
       if ($this->tipo === "cc") {
         $this->saldo = 50;
       }
@@ -25,7 +26,13 @@
     }
 
     public function fecharConta() {
-      $this->status = false;
+      if ($this->saldo === 0) {
+        $this->status = false;
+        echo "Conta fechada com sucesso!!!";
+      }
+      else{
+        echo "<br>Erro! saque todo seu dinheiro antes de fechar a conta!<br>e verifique se não possuí debito.<br>";
+      }
     }
 
     public function depositar($depo) {
@@ -47,10 +54,32 @@
     }
 
     public function pagarMensal() {
-
+      if ($this->saldo > 0 && $this->tipo === "cc") {
+        $this->saldo -= 12;
+      }
+      elseif ($this->saldo > 0 && $this->tipo === "cp") {
+        $this->saldo -= 20;
+      }
+      else {
+        echo "Erro! ao pagar a mensalidade!!!";
+      }
     }
 
+    //getters method
+    public function getNumconta() {
+      return $this->numConta;
+    }
+    public function getTipo() {
+      return $this->tipo;
+    }
+    public function getDono() {
+      return $this->dono;
+    }
     public function getSaldo() {
       return $this->saldo;
     }
+    public function getStatus() {
+      return $this->status;
+    }
+  
   }

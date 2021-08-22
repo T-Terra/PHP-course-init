@@ -13,8 +13,9 @@
     $c1 = new ContaBanco("Gabriel", "cc", 123456);
     $c1->abrirConta();
     $c1->depositar(150);
-    $c1->sacar(10);
+    $c1->pagarMensal();
     print_r($c1);
+    print_r($c1->getTipo());
   ?>
   </pre>
 </body>
