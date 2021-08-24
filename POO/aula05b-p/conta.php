@@ -10,15 +10,24 @@
   <pre>
   <?php
     require_once "../class/ClassConta.php";
-    $c1 = new ContaBanco();
-    $c1->setDono("Gabriel");
+
+    $c1 = new ContaBanco(1);
     $c1->abrirConta("cc");
+    $c1->setDono("Jubileu");
+    $c1->depositar(300);
     $c1->pagarMensal();
-    print_r($c1);
-    $c2 = new ContaBanco();
-    $c2->setDono("Maria");
+    
+    $c2 = new ContaBanco(2);
     $c2->abrirConta("cp");
+    $c2->setDono("Creuza");
+    $c2->depositar(500);
+    $c2->sacar(650);
+    $c2->fecharConta();
+
+
+    print_r($c1);
     print_r($c2);
+
   ?>
   </pre>
 </body>
