@@ -66,11 +66,15 @@
       public function maisVolume() {
         if ($this->getLigado() === true) {
           $this->setVolume($this->getVolume() + 10);
+        } else {
+          echo "<p>ERRO! Ligue a Tv antes de aumentar o volume</p>";
         }
       }
       public function menosVolume() {
         if ($this->getLigado() === true) {
           $this->setVolume($this->getVolume() - 10);
+        } else {
+          echo "<p>ERRO! Ligue a Tv antes de diminuir o volume</p>";
         }
       }
       public function ligarMudo() {
