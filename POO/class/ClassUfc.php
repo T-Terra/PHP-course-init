@@ -3,13 +3,8 @@
     //Atributos
     private $nome;
     private $nacionalidade;
-    private $idade;
-    private $altura;
-    private $peso;
-    private $categoria;
-    private $vitorias;
-    private $derrotas;
-    private $empates;
+    private $idade, $altura, $peso;
+    private $categoria, $vitorias, $derrotas, $empates;
 
     // Método construtor
     public function __construct($no, $na, $ida, $al, $pe, $vi, $de, $em) {
