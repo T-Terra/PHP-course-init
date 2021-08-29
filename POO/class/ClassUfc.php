@@ -55,7 +55,7 @@
 
 
     // Métodos getters
-    private function getNome() {
+    public function getNome() {
       return $this->nome;
     }
     private function getNacionalidade() {
@@ -70,7 +70,7 @@
     private function getPeso() {
       return $this->peso;
     }
-    private function getCategoria() {
+    public function getCategoria() {
       return $this->categoria;
     }
     private function getVitorias() {
@@ -82,6 +82,7 @@
     private function getEmpates() {
       return $this->empates;
     }
+    
     // Métodos setters
     private function setNome($n) {
       $this->nome = $n;
