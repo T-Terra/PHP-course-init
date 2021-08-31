@@ -9,9 +9,7 @@
 </head>
 <body>
   <?php 
-    include_once "header.php";
-    
-    head();
+    require_once "header.php";
   ?>
 </body>
 </html>
