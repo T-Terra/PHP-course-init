@@ -10,10 +10,22 @@
   <pre>
     <?php
       require_once "pessoa.php";
+      require_once "livro.php";
+
       $p = array();
-      $p[1] = new Pessoa("Gabriel", 22, "M");
+      $p[0] = new Pessoa("Gabriel", 22, "M");
       //$p[1]->fazerAniver();
-      print_r($p[1]);
+      //print_r($p[0]);
+
+      $l = array();
+      $l[0] = new Livro("Harry Potter", "JK. Roling", 210, 2, $p[0]->getNome());
+      $l[0]->avancarPag();
+      $l[0]->voltarPag();
+      $l[0]->detalhes();
+      //$l[0]->avancarPag();
+      //$l[0]->abrir();
+      //$l[0]->fechar();
+      //print_r($l[0]);
     ?>
   </pre>
   

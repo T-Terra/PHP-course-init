@@ -19,7 +19,7 @@
     }
 
     //getters
-    private function getNome() {
+    public function getNome() {
       return $this->nome;
     }
     private function getIdade() {
