@@ -1,5 +1,6 @@
 <?php
-  require_once "interface.php";
+  require_once "Publicacao.php";
+  require_once "pessoa.php";
 
   class Livro implements Publicacao {
     private $titulo;
@@ -9,11 +10,11 @@
     private $aberto;
     private $leitor;
 
-    public function __construct($t, $a, $totpag, $pagat, $le) {
+    public function __construct($t, $a, $totpag, $le) {
       $this->setTitulo($t);
       $this->setAutor($a);
       $this->setTotPag($totpag);
-      $this->setPagAtual($pagat);
+      $this->setPagAtual(0);
       $this->setAberto(false);
       $this->setLeitor($le);
     }
@@ -24,27 +25,24 @@
       echo "<p>Autor(a): {$this->getAutor()}</p>";
       echo "<p>Total de páginas: {$this->getTotPag()}</p>";
       echo "<p>Página atual: {$this->getPagAtual()}</p>";
-      echo "<p>Leitor: {$this->getLeitor()}</p>";
+      echo "<p>Leitor: {$this->getLeitor()->getNome()}</p>";
     }
 
     //Métodos da Interface
     public function abrir() {
       $this->setAberto(true);
-      if ($this->getAberto() === true) {
-        echo "<p>Abriu o livro!</p>";
-      }
+      echo "<p>Abriu o livro!</p>";
     }
     public function fechar() {
       $this->setAberto(false);
-      if ($this->getAberto() === false) {
-        echo "<p>fechou o livro!</p>";
-      }
+      echo "<p>fechou o livro!</p>";
     }
-    public function folhear() {
-      if ($this->getPagAtual() <= $this->getTotPag()) {
-        $this->setPagAtual($this->getPagAtual() + 10);
+
+    public function folhear($p) {
+      if ($p > $this->getTotPag()) {
+        $this->setPagAtual(0);
       } else {
-        echo "<p>Não é possível folhear mais, já chegou ao final do livro</p>";
+        $this->setPagAtual($this->getPagAtual() + $p);
       }
     }
     public function avancarPag() {

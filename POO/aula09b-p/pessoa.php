@@ -6,10 +6,10 @@
     private $nome, $idade, $sexo;
 
 
-    public function __construct($n, $i, $s) {
-      $this->setNome($n);
-      $this->setIdade($i);
-      $this->setSexo($s);
+    public function __construct($nome, $idade, $sexo) {
+      $this->setNome($nome);
+      $this->setIdade($idade);
+      $this->setSexo($sexo);
     }
 
 
