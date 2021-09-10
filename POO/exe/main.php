@@ -15,16 +15,21 @@
       //require_once "Pessoa.php";
       $v[0] = new Video("Aula 1 de POO");
       $v[1] = new Video("Aula 1 de PHP");
-      print_r($v);
-
+      
       $g[0] = new Gafanhoto("Gabriel", 22, "M", "gabriel@gmail.com");
-      print_r($g);
-
-      /*$vis[0] = new Visualizacao($g[0], $v[0]);
+      $g[1] = new Gafanhoto("Maria", 52, "F", "Maria@gmail.com");
+    
+      $vis[0] = new Visualizacao($g[0], $v[0]);
       $vis[1] = new Visualizacao($g[0], $v[1]);
+      $vis[2] = new Visualizacao($g[1], $v[1]);
+      
 
       $vis[0]->avaliar();
-      print_r($vis);*/
+      $vis[0]->avaliarNota(10);
+      $vis[0]->avaliarPorc(100);
+
+      print_r($v);
+      print_r($g);
 
     ?>
   </pre>

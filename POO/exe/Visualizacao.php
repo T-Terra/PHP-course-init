@@ -13,10 +13,10 @@ class Visualizacao {
   }
 
   public function avaliar() {
-    $this->Filme->setAvaliacao(5);
+    $this->filme->setAvaliacao(5);
   }
   public function avaliarNota($nota) {
-    $this->Filme->setAvaliacao($nota);
+    $this->filme->setAvaliacao($nota);
   }
   public function avaliarPorc($porc) {
     $nova = 0;
@@ -29,7 +29,7 @@ class Visualizacao {
     } else {
       $nova = 10;
     }
-    $this->Filme->setAvaliacao($nova);
+    $this->filme->setAvaliacao($nova);
   }
 
   //getters
